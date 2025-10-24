@@ -1,0 +1,28 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.welcome-message {
+    flex: 1;
+    margin-top: 200px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.welcome-message h1 {
+    font-weight: 400;
+    
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}

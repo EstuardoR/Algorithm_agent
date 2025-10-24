@@ -1,0 +1,35 @@
+.custom-button {
+    background-color: #007bff;
+    font-family: "Oswald", system-ui;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 16px;
+    cursor: pointer;
+    gap: 10;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+
+
+/* Efecto hover */
+.custom-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    /* Un pequeño efecto de levantamiento */
+}
+
+/* Efecto activo (cuando se presiona) */
+.custom-button:active {
+    background-color: #004085;
+    transform: translateY(0);
+    /* Vuelve a la posición original */
+}
+
+/* Estilo para el estado deshabilitado */
+.custom-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
