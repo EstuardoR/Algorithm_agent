@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# Algorithm Agent Bot 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  En este proyecto se desarrollo un bot con interfaz grafica simulando un chat interactivo, construido con **React + Vite + Typescript**, Integrado con la **API de Gemini**
+  de Google AI. Este proyecto demuestra cómo conectar un modelo de lenguaje a una interfaz web moderna con un diseño limpio y responsivo.
 
-Currently, two official plugins are available:
+  ## 🚀 Características
+  - Interfaz en tiempo real construida con **React + Vite**
+  - Tipado fuerte con **Typescript**
+  - Integración con **Gemini API**
+  - Manejo de estado con **Hooks**
+  - Diseño minimalista y adaptable
+  - Respuestas dinamicas siguiento Etapas de solución de problemas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🛠️ Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Tecnología | Descripción |
+|-------------|--------------|
+| React | Librería para interfaces de usuario |
+| Vite | Herramienta de build ultrarrápida |
+| TypeScript | Tipado sobre JavaScript |
+| Gemini API | Modelo de lenguaje de Google |
+| Axios / Fetch | Llamadas HTTP a la API |
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧱 Arquitectura
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. El usuario escribe un mensaje en la interfaz.
+2. El mensaje se envía al servicio `GeminiService`.
+3. El backend de Gemini procesa el texto y devuelve una respuesta generada.
+4. La UI actualiza la conversación en tiempo real.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+--- 
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 UI
+![Landing page main](<img width="1511" height="905" alt="image" src="https://github.com/user-attachments/assets/e890b82e-0c81-4d94-8604-3fef8cd3dca5" />)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Vista del chat](<img width="1512" height="903" alt="image" src="https://github.com/user-attachments/assets/33f481fe-b44a-4286-a67e-6f6f1c783e4e" />)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![Interfaz Mensajes de User y Bot](<img width="1512" height="906" alt="image" src="https://github.com/user-attachments/assets/f98fb961-9591-4851-b495-d6870e55e940" />)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Diagrama de secuencia
+
+```mermaid
+sequenceDiagram
+User->>Frontend: Escribe mensaje
+Frontend->>Gemini API: Envía prompt
+Gemini API-->>Frontend: Devuelve respuesta
+Frontend-->>User: Muestra resultado en chat
+
+
+
