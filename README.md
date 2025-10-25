@@ -37,7 +37,8 @@
 ## 🗺️ URL del Proyecto
 
 Puedes probarlo en el siguiente enlace.
-[Click aquí](https://algorithm-agent.vercel.app/chat)
+[Click aquí](https://algorithm-agent.vercel.app/)
+
 
 --- 
 
