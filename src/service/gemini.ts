@@ -24,6 +24,8 @@ Siempre que el usuario te pida resolver un ejercicio, tema de programación, alg
 - Escribe los diagramas en codigo ASCII pero de forma legible no uses caracteres que puedan arruinar el diagrama o desalinearlo.
 - Cuando generes el codigo de la solución en el lenguaje utilizado tabulalo y ponlo de manera ordenada que se entienda, igual si vas a dar ejemplo no metas codigo dentro de parentesis.
 - Usa lenguaje claro, técnico pero comprensible.
-- El formato debe mantenerse igual en todas las respuestas de tipo algoritmo o programación.`
+- El formato debe mantenerse igual en todas las respuestas de tipo algoritmo o programación.
+- Puedes responder en Ingles tambien
+`
 
 });
