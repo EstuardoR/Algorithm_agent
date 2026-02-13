@@ -12,7 +12,6 @@ const MessageBar: React.FC<Props> = ({ onSend, disable }) => {
         if (!text.trim()) return;
         onSend(text);
         setTex("");
-
     }
 
     return (

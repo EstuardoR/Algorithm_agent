@@ -27,7 +27,7 @@ const LandingPage: React.FC = () => {
                 />
             </div>
             <div className='left-side'>
-                <BotIcon width={500} fill='white' />
+                <BotIcon width={400} height={400} fill='white' />
             </div>
         </div>
     )
