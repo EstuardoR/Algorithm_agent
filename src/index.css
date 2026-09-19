@@ -1,15 +1,47 @@
 :root {
-  font-family: "Oswald", system-ui;
+  --font-display: "Oswald", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --bg-base: #0a0e17;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-border: rgba(255, 255, 255, 0.12);
+
+  --accent: #5b8cff;
+  --accent-hover: #3f6fe0;
+  --accent-active: #2f56b8;
+  --accent-glow: rgba(91, 140, 255, 0.18);
+  --accent-shadow: 0 8px 24px -6px rgba(91, 140, 255, 0.5);
+  --accent-shadow-hover: 0 10px 28px -6px rgba(91, 140, 255, 0.65);
+  --violet-glow: rgba(139, 92, 246, 0.1);
+
+  --text-primary: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --text-faint: rgba(255, 255, 255, 0.35);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: #020024;
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color-scheme: dark;
+  color: var(--text-primary);
+  font-family: var(--font-body);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(600px circle at 85% 10%, var(--accent-glow), transparent 60%),
+    radial-gradient(500px circle at 10% 90%, var(--violet-glow), transparent 60%);
+  background-attachment: fixed;
 }

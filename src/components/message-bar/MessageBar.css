@@ -3,41 +3,61 @@
     gap: 8px;
     width: 100%;
     padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.508);
+    border-top: 1px solid var(--surface-border);
 }
 
 .message-bar input::placeholder {
-    color: rgba(255, 255, 255, 0.508);
+    color: var(--text-muted);
 }
 
 .message-input {
     flex: 1;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--surface);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-    border-radius: 16px;
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-lg);
+    padding: 14px 20px;
     outline: none;
     font-size: 15px;
+    font-family: var(--font-body);
+    color: var(--text-primary);
 }
 
 .message-input:focus {
-    box-shadow: 0 0 3px rgba(0, 120, 255, 0.3);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    border-color: var(--accent);
 }
 
 .send-button {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.701);
-    border: none;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-active));
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     padding: 10px 25px;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     cursor: pointer;
     font-weight: 500;
-    transition: background 0.2s ease;
+    box-shadow: var(--accent-shadow);
+    transition: box-shadow 0.2s ease, transform 0.1s ease, filter 0.2s ease;
+}
+
+.send-button:hover:not(:disabled) {
+    filter: brightness(1.08);
+    box-shadow: var(--accent-shadow-hover);
+    transform: translateY(-1px);
+}
+
+.send-button:active:not(:disabled) {
+    filter: brightness(0.95);
+    transform: translateY(0);
+}
+
+.send-button:disabled {
+    background: var(--surface);
+    color: var(--text-muted);
+    border-color: var(--surface-border);
+    box-shadow: none;
+    cursor: not-allowed;
 }
