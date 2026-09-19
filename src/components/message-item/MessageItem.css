@@ -14,21 +14,23 @@
 .message-bubble {
     max-width: 60%;
     padding: 10px 14px;
-    border-radius: 18px;
+    border-radius: var(--radius-lg);
     word-wrap: break-word;
     font-size: 15px;
+    font-family: var(--font-body);
 }
 
 .user-bubble {
-    background-color: #0078ff;
+    background-color: var(--accent);
     color: white;
-    border-bottom-right-radius: 4px;
+    border-bottom-right-radius: var(--radius-sm);
 }
 
 .bot-bubble {
-    background-color: #e5e5ea;
-    color: #000;
-    border-bottom-left-radius: 4px;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-border);
+    color: var(--text-primary);
+    border-bottom-left-radius: var(--radius-sm);
 }
 
 .bot-bubble.loading {
@@ -59,13 +61,14 @@
     background: #1e1e1e;
     color: #fff;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     overflow-x: auto;
     font-family: monospace;
 }
 
 .inline-code {
-    background: #eee;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
     padding: 2px 5px;
     border-radius: 4px;
     font-family: monospace;

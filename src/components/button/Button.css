@@ -1,29 +1,35 @@
 .custom-button {
-    background-color: #007bff;
-    font-family: "Oswald", system-ui;
+    background: linear-gradient(135deg, var(--accent), var(--accent-active));
+    font-family: var(--font-display);
     color: white;
-    border: none;
-    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 12px 22px;
     font-size: 20px;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     cursor: pointer;
-    gap: 10;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: var(--accent-shadow);
+    transition: box-shadow 0.3s ease, transform 0.1s ease, filter 0.2s ease;
 }
 
 .custom-button:hover {
-    background-color: #0056b3;
+    filter: brightness(1.08);
+    box-shadow: var(--accent-shadow-hover);
     transform: translateY(-2px);
 }
 
 
 .custom-button:active {
-    background-color: #004085;
+    filter: brightness(0.95);
+    box-shadow: var(--accent-shadow);
     transform: translateY(0);
 }
 
 .custom-button:disabled {
-    background-color: #cccccc;
+    background: #3a3f4b;
+    color: var(--text-muted);
+    border-color: transparent;
+    box-shadow: none;
     cursor: not-allowed;
+    filter: none;
     transform: none;
 }

@@ -2,7 +2,7 @@ import './Chat.css'
 import { useState } from 'react';
 import MessageBar from '../../components/message-bar/MessageBar';
 import MessageItem from '../../components/message-item/MessageItem';
-import { AiOutlineAliwangwang } from 'react-icons/ai';
+import BotIcon from '../../icons/bot-icon';
 import { model } from '../../service/gemini';
 
 interface Message {
@@ -47,8 +47,8 @@ const ChatPage: React.FC = () => {
 
             {message.length <= 0 ? (
                 <div className='welcome-message'>
+                    <BotIcon width={56} height={56} fill='currentColor' />
                     <h1>La conversación perfecta empieza ahora. ¿Qué tienes en mente?</h1>
-                    <AiOutlineAliwangwang size={50} />
                 </div>
             ) : (
                 <div className='messages'>
